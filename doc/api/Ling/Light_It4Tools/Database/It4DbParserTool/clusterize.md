@@ -71,7 +71,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::clusterize](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L367-L380)
+See the source code for method [It4DbParserTool::clusterize](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L376-L390)
 
 
 See Also

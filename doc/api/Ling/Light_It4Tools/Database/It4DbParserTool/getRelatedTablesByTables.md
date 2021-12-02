@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [It4DbParserTool::getRelatedTablesByTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getRelatedTablesByTables.md)(string $foreignKeysDir, array $tables) : array
+public [It4DbParserTool::getRelatedTablesByTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getRelatedTablesByTables.md)(string $foreignKeysDir, array $tables, ?array $noParseTables = []) : array
 
 
 
@@ -31,6 +31,11 @@ The second set is the ensemble of table names which are related to the first set
 The two sets are merged together.
 
 
+Use $noParseTables to pass well known tables with a lot of relationships,
+but you don't want to show all the relationships. The noParseTable itself will be included,
+but not its relationships.
+
+
 
 
 Parameters
@@ -42,6 +47,10 @@ Parameters
     
 
 - tables
+
+    
+
+- noParseTables
 
     
 
@@ -60,7 +69,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::getRelatedTablesByTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L294-L302)
+See the source code for method [It4DbParserTool::getRelatedTablesByTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L303-L311)
 
 
 See Also

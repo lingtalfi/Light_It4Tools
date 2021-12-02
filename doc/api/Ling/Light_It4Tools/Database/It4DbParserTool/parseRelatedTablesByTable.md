@@ -7,7 +7,7 @@ It4DbParserTool::parseRelatedTablesByTable
 
 
 
-It4DbParserTool::parseRelatedTablesByTable — Accumalates the tables related via a foreign key to the given table.
+It4DbParserTool::parseRelatedTablesByTable — Accumulates the tables related via a foreign key to the given table.
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-private [It4DbParserTool::parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/parseRelatedTablesByTable.md)(string $foreignKeysDir, string $table, ?array &$alreadyKnownTables = []) : void
+private [It4DbParserTool::parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/parseRelatedTablesByTable.md)(string $foreignKeysDir, string $table, ?array &$alreadyKnownTables = [], ?array $noParseTables = []) : void
 
 
 
 
-Accumalates the tables related via a foreign key to the given table.
+Accumulates the tables related via a foreign key to the given table.
 
 
 
@@ -42,6 +42,10 @@ Parameters
 
     
 
+- noParseTables
+
+    
+
 
 Return values
 ================
@@ -57,7 +61,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L421-L434)
+See the source code for method [It4DbParserTool::parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L432-L451)
 
 
 See Also

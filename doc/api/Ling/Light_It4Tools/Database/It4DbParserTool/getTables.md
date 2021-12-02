@@ -51,7 +51,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L403-L408)
+See the source code for method [It4DbParserTool::getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L413-L418)
 
 
 See Also

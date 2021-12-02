@@ -76,10 +76,13 @@ class It4DbParserTool
         $s = '';
         foreach ($tables as $table) {
             // assuming mysql 8+
-            $statement = $_db->fetch("show create table `$table`")['Create Table'];
-            $s .= $statement;
-            $s .= PHP_EOL;
-            $s .= PHP_EOL;
+            $row = $_db->fetch("show create table `$table`");
+            $statement = $row['Create Table'] ?? null;
+            if (null !== $statement) {
+                $s .= $statement;
+                $s .= PHP_EOL;
+                $s .= PHP_EOL;
+            }
         }
         FileSystemTool::mkfile($f, $s);
     }
@@ -287,15 +290,21 @@ class It4DbParserTool
      * The two sets are merged together.
      *
      *
+     * Use $noParseTables to pass well known tables with a lot of relationships,
+     * but you don't want to show all the relationships. The noParseTable itself will be included,
+     * but not its relationships.
+     *
+     *
      * @param string $foreignKeysDir
      * @param array $tables
+     * @param array $noParseTables
      * @return array
      */
-    public function getRelatedTablesByTables(string $foreignKeysDir, array $tables): array
+    public function getRelatedTablesByTables(string $foreignKeysDir, array $tables, array $noParseTables = []): array
     {
         $alreadyKnownTables = [];
         foreach ($tables as $table) {
-            $this->parseRelatedTablesByTable($foreignKeysDir, $table, $alreadyKnownTables);
+            $this->parseRelatedTablesByTable($foreignKeysDir, $table, $alreadyKnownTables, $noParseTables);
         }
         sort($alreadyKnownTables);
         return array_unique($alreadyKnownTables);
@@ -368,6 +377,7 @@ class It4DbParserTool
     {
         $contents = [];
         $notFound = [];
+        $tables = array_unique($tables);
         foreach ($tables as $table) {
             $createFile = $createDir . "/$table.sql";
             if (false === file_exists($createFile)) {
@@ -411,15 +421,22 @@ class It4DbParserTool
     //
     //--------------------------------------------
     /**
-     * Accumalates the tables related via a foreign key to the given table.
+     * Accumulates the tables related via a foreign key to the given table.
      *
      *
      * @param string $foreignKeysDir
      * @param string $table
      * @param array $alreadyKnownTables
+     * @param array $noParseTables
      */
-    private function parseRelatedTablesByTable(string $foreignKeysDir, string $table, array &$alreadyKnownTables = [])
+    private function parseRelatedTablesByTable(string $foreignKeysDir, string $table, array &$alreadyKnownTables = [], array $noParseTables = [])
     {
+        if (true === in_array($table, $noParseTables, true)) {
+            $alreadyKnownTables[] = $table;
+            return;
+        }
+
+
         if (false === in_array($table, $alreadyKnownTables)) {
             $alreadyKnownTables[] = $table;
             $fkFile = $foreignKeysDir . "/$table.byml";
@@ -427,7 +444,7 @@ class It4DbParserTool
                 $fkeys = BabyYamlUtil::readFile($fkFile);
                 foreach ($fkeys as $fkey) {
                     $refTable = $fkey[0];
-                    $this->parseRelatedTablesByTable($foreignKeysDir, $refTable, $alreadyKnownTables);
+                    $this->parseRelatedTablesByTable($foreignKeysDir, $refTable, $alreadyKnownTables, $noParseTables);
                 }
             }
         }

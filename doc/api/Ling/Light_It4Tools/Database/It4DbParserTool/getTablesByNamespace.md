@@ -51,7 +51,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::getTablesByNamespace](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L313-L326)
+See the source code for method [It4DbParserTool::getTablesByNamespace](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L322-L335)
 
 
 See Also
