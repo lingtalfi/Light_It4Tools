@@ -61,7 +61,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L432-L451)
+See the source code for method [It4DbParserTool::parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L433-L452)
 
 
 See Also

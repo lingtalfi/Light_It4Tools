@@ -72,6 +72,10 @@ it4_tools_vars:
 History Log
 =============
 
+- 1.0.2 -- 2021-12-02
+
+    - test commit
+  
 - 1.0.1 -- 2021-12-02
 
     - add $noParseTables param to It4DbParserTool.getRelatedTablesByTables method

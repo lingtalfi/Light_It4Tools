@@ -14,6 +14,7 @@ use Ling\Light_It4Tools\Exception\LightIt4ToolsException;
 class It4DbParserTool
 {
 
+
     /**
      * This property holds the container for this instance.
      * @var LightServiceContainerInterface

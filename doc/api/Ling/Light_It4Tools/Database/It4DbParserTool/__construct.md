@@ -46,7 +46,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::__construct](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L34-L37)
+See the source code for method [It4DbParserTool::__construct](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L35-L38)
 
 
 See Also

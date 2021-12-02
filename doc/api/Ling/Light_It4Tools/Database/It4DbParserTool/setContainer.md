@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::setContainer](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L56-L59)
+See the source code for method [It4DbParserTool::setContainer](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L57-L60)
 
 
 See Also

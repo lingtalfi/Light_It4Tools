@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::setDbName](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L44-L48)
+See the source code for method [It4DbParserTool::setDbName](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L45-L49)
 
 
 See Also
