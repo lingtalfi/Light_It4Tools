@@ -72,6 +72,10 @@ it4_tools_vars:
 History Log
 =============
 
+- 1.0.3 -- 2021-12-02
+
+    - test commit 2
+  
 - 1.0.2 -- 2021-12-02
 
     - test commit
