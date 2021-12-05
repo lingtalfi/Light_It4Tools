@@ -1,6 +1,6 @@
 Light_It4Tools
 ===========
-2021-12-01
+2021-12-01 -> 2021-12-05
 
 
 
@@ -72,6 +72,10 @@ it4_tools_vars:
 History Log
 =============
 
+- 1.0.5 -- 2021-12-05
+
+    - add It4FileParserTool class
+  
 - 1.0.4 -- 2021-12-05
 
     - add It4DbParserTool->recreateAll method

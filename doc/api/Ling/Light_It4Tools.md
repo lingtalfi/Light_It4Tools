@@ -22,6 +22,8 @@ Table of contents
     - [It4DbParserTool::clusterize](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/clusterize.md) &ndash; Creates a sql file of type create.
     - [It4DbParserTool::getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getTables.md) &ndash; Returns the available tables.
 - [LightIt4ToolsException](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Exception/LightIt4ToolsException.md) &ndash; The LightIt4ToolsException class.
+- [It4FileParserTool](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/File/It4FileParserTool.md) &ndash; The It4FileParserTool class.
+    - [It4FileParserTool::readTablesFromCreateFiles](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/File/It4FileParserTool/readTablesFromCreateFiles.md) &ndash; Returns the array of tables, based on the given root dir.
 - [LightIt4ToolsService](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Service/LightIt4ToolsService.md) &ndash; The LightIt4ToolsService class.
     - [LightIt4ToolsService::__construct](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Service/LightIt4ToolsService/__construct.md) &ndash; Builds the LightIt4ToolsService instance.
     - [LightIt4ToolsService::setContainer](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Service/LightIt4ToolsService/setContainer.md) &ndash; Sets the container.
@@ -35,6 +37,7 @@ Dependencies
 ============
 - [BabyYaml](https://github.com/lingtalfi/BabyYaml)
 - [Bat](https://github.com/lingtalfi/Bat)
+- [DirScanner](https://github.com/lingtalfi/DirScanner)
 - [Light](https://github.com/lingtalfi/Light)
 - [Light_Database](https://github.com/lingtalfi/Light_Database)
 

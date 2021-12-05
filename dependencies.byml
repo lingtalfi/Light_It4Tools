@@ -2,6 +2,7 @@ dependencies:
     Ling: 
         - BabyYaml
         - Bat
+        - DirScanner
         - Light
         - Light_Database
     

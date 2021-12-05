@@ -54,4 +54,4 @@ See the source code of [Ling\Light_It4Tools\Exception\LightIt4ToolsException](ht
 
 SeeAlso
 ==============
-Previous class: [It4DbParserTool](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool.md)<br>Next class: [LightIt4ToolsService](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Service/LightIt4ToolsService.md)<br>
+Previous class: [It4DbParserTool](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool.md)<br>Next class: [It4FileParserTool](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/File/It4FileParserTool.md)<br>
