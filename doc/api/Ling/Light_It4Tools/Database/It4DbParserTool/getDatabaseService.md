@@ -51,7 +51,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::getDatabaseService](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L402-L405)
+See the source code for method [It4DbParserTool::getDatabaseService](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L506-L509)
 
 
 See Also
@@ -59,5 +59,5 @@ See Also
 
 The [It4DbParserTool](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool.md) class.
 
-Previous method: [clusterize](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/clusterize.md)<br>Next method: [getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getTables.md)<br>
+Previous method: [getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getTables.md)<br>Next method: [parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/parseRelatedTablesByTable.md)<br>
 

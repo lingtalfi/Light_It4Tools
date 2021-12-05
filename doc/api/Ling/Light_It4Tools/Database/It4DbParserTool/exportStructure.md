@@ -54,7 +54,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::exportStructure](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L70-L89)
+See the source code for method [It4DbParserTool::exportStructure](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L157-L176)
 
 
 See Also
@@ -62,5 +62,5 @@ See Also
 
 The [It4DbParserTool](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool.md) class.
 
-Previous method: [setContainer](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/setContainer.md)<br>Next method: [exportStructureWithForeignKeys](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/exportStructureWithForeignKeys.md)<br>
+Previous method: [recreateAll](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/recreateAll.md)<br>Next method: [exportStructureWithForeignKeys](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/exportStructureWithForeignKeys.md)<br>
 

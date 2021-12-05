@@ -56,7 +56,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::dispatchFkeys](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L201-L279)
+See the source code for method [It4DbParserTool::dispatchFkeys](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L288-L366)
 
 
 See Also

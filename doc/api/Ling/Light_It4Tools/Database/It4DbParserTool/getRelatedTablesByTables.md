@@ -69,7 +69,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::getRelatedTablesByTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L304-L312)
+See the source code for method [It4DbParserTool::getRelatedTablesByTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L391-L399)
 
 
 See Also

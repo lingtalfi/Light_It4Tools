@@ -72,6 +72,10 @@ it4_tools_vars:
 History Log
 =============
 
+- 1.0.4 -- 2021-12-05
+
+    - add It4DbParserTool->recreateAll method
+    
 - 1.0.3 -- 2021-12-02
 
     - test commit 2

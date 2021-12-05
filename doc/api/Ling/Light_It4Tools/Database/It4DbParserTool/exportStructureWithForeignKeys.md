@@ -72,7 +72,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::exportStructureWithForeignKeys](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L113-L189)
+See the source code for method [It4DbParserTool::exportStructureWithForeignKeys](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L200-L276)
 
 
 See Also

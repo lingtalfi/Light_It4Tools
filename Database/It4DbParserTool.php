@@ -61,6 +61,93 @@ class It4DbParserTool
 
 
     /**
+     * Will create a directory containing a lot of create files (a file which contains one or more create statements).
+     * Create files can be viewed by tools such as dbSchema, to provide the user with visual diagrams.
+     *
+     * To create this directory, you need to provide the foreignKeysFile first.
+     *
+     *
+     * From there, the given rootDir will be created, and its structure will be the following:
+     *
+     * - $rootDir/
+     * ----- opera_demoparis-fkeys-structure: a file containing the create statements necessary to recreate the demoparis database, using foreign keys when appropriate
+     * ----- opera_demoparis-structure.sql: a file containing the create statements necessary to recreate the demoparis database, without foreign keys (original design)
+     * ----- fkeys/: contains one .byml file per table, each file describes the foreign keys for a particular table
+     * ----- create/: contains all the create files
+     * --------- single/: contains one file per table, each file containing the create statement for the table
+     * --------- single-related/: contains one file per table, each file containing the create statements for the table plus all the related tables (related via foreign keys, recursively)
+     * --------- namespaces/: contains one file per namespace (i.e. unique table prefix, the prefix being the first part of the table name before the first underscore),
+     *                  each file containing the create statements for every table having the same namespace.
+     * --------- namespaces-related/: contains one file per namespace (i.e. see above), each file contains the create statements for every table under that namespace, plus
+     *                  all the related tables recursively (related via foreign keys)
+     *
+     *
+     *
+     * @param string $foreignKeysFile
+     * @param string $rootDir
+     * @throws \Exception
+     */
+    public function recreateAll(string $foreignKeysFile, string $rootDir)
+    {
+
+
+        $fkeyDir = $rootDir . "/fkeys";
+
+
+        // 0.
+        $createSingleDir = $rootDir . "/create/single";
+
+        // 1.
+        $this->dispatchFkeys($foreignKeysFile, $fkeyDir);
+
+
+        // 2.
+        $this->exportStructure($rootDir . "/opera_demoparis-structure.sql");
+
+
+        // 3.
+        $this->exportStructureWithForeignKeys($fkeyDir, [
+                "dstType" => "file",
+                "dstValue" => $rootDir . "/opera_demoparis-fkeys-structure.sql",
+            ]
+        );
+
+
+        // 4.
+        $this->exportStructureWithForeignKeys($fkeyDir, [
+            "dstType" => "dir",
+            "dstValue" => $createSingleDir,
+        ],
+        );
+
+
+        // 5.
+        $namespaces = $this->getPotentialNamespaces();
+        $notFound = [];
+        foreach ($namespaces as $ns) {
+            $tables = $this->getTablesByNamespace($ns);
+            $this->clusterize($createSingleDir, $tables, $rootDir . "/create/namespaces/$ns.sql", $notFound);
+
+
+            foreach ($tables as $table) {
+                $relatedTables = $this->getRelatedTablesByTables($fkeyDir, [$table]);
+                $tables = array_merge($tables, $relatedTables);
+            }
+            $this->clusterize($createSingleDir, $tables, $rootDir . "/create/namespaces-related/$ns.sql", $notFound);
+        }
+
+
+        // 6.
+        $tables = $this->getTables();
+        foreach ($tables as $table) {
+            $relatedTables = $this->getRelatedTablesByTables($fkeyDir, [$table]);
+            $tables = array_merge($tables, $relatedTables);
+            $this->clusterize($createSingleDir, $tables, $rootDir . "/create/single-related/$table.sql", $notFound);
+        }
+    }
+
+
+    /**
      * Writes the database structure to the given file.
      *
      *
@@ -383,12 +470,29 @@ class It4DbParserTool
             $createFile = $createDir . "/$table.sql";
             if (false === file_exists($createFile)) {
                 $notFound[] = [$table, $createFile];
+            } else {
+                $contents[] = file_get_contents($createFile);
             }
-            $contents[] = file_get_contents($createFile);
         }
 
         FileSystemTool::mkfile($dstFile, implode(PHP_EOL . PHP_EOL, $contents));
     }
+
+
+    /**
+     * Returns the available tables.
+     *
+     * @return array
+     * @throws \Exception
+     */
+    public function getTables(): array
+    {
+        $_db = $this->getDatabaseService();
+        $util = $_db->getMysqlInfoUtil();
+        return $util->getTables();
+    }
+
+
 
     //--------------------------------------------
     //
@@ -405,18 +509,6 @@ class It4DbParserTool
     }
 
 
-    /**
-     * Returns the available tables.
-     *
-     * @return array
-     * @throws \Exception
-     */
-    protected function getTables(): array
-    {
-        $_db = $this->getDatabaseService();
-        $util = $_db->getMysqlInfoUtil();
-        return $util->getTables();
-    }
 
     //--------------------------------------------
     //

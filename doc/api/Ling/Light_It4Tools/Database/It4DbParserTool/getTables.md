@@ -16,7 +16,7 @@ Description
 ================
 
 
-protected [It4DbParserTool::getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getTables.md)() : array
+public [It4DbParserTool::getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getTables.md)() : array
 
 
 
@@ -51,7 +51,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [It4DbParserTool::getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L414-L419)
+See the source code for method [It4DbParserTool::getTables](https://github.com/lingtalfi/Light_It4Tools/blob/master/Database/It4DbParserTool.php#L488-L493)
 
 
 See Also
@@ -59,5 +59,5 @@ See Also
 
 The [It4DbParserTool](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool.md) class.
 
-Previous method: [getDatabaseService](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getDatabaseService.md)<br>Next method: [parseRelatedTablesByTable](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/parseRelatedTablesByTable.md)<br>
+Previous method: [clusterize](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/clusterize.md)<br>Next method: [getDatabaseService](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Database/It4DbParserTool/getDatabaseService.md)<br>
 
