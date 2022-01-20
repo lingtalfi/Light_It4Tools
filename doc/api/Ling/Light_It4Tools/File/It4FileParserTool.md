@@ -4,7 +4,7 @@
 
 The It4FileParserTool class
 ================
-2021-12-01 --> 2021-12-05
+2021-12-01 --> 2022-01-20
 
 
 
@@ -52,4 +52,4 @@ See the source code of [Ling\Light_It4Tools\File\It4FileParserTool](https://gith
 
 SeeAlso
 ==============
-Previous class: [LightIt4ToolsException](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Exception/LightIt4ToolsException.md)<br>Next class: [LightIt4ToolsService](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Service/LightIt4ToolsService.md)<br>
+Previous class: [LightIt4ToolsException](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Exception/LightIt4ToolsException.md)<br>Next class: [It42021LightDatabaseInfoService](https://github.com/lingtalfi/Light_It4Tools/blob/master/doc/api/Ling/Light_It4Tools/Light_DatabaseInfo/It42021LightDatabaseInfoService.md)<br>

@@ -5,6 +5,8 @@ dependencies:
         - DirScanner
         - Light
         - Light_Database
+        - Light_DatabaseInfo
+        - SimplePdoWrapper
     
 
 post_install: 
